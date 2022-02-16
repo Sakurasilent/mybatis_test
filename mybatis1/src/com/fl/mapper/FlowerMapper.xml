@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace = "a.b" >
-    <select id="selectAll"  parameterType="int" resultType="com.fl.entity.Flower">
+<mapper namespace = "com.fl.mapper.FlowerMapper" >
+    <select id="selectAll"  parameterType="int" resultType="flower">
         select * from flower
     </select>
 </mapper>

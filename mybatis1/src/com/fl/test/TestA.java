@@ -16,7 +16,7 @@ public class TestA {
         InputStream inputStream = Resources.getResourceAsStream("mybatis.xml");
         SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession sqlSession = factory.openSession();
-        List<Flower> list = sqlSession.selectList("a.b.selectAll");
+        List<Flower> list = sqlSession.selectList("com.fl.mapper.FlowerMapper.selectAll");
         System.out.println(list);
         //关闭资源
         sqlSession.close();

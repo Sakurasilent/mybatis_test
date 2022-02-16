@@ -3,16 +3,30 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <!--读取属性文件-->
+    <properties resource="jdbc.properties"></properties>
+
+    <!--指定mybatis中的日志类型-->
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
+    <typeAliases>
+        <!-- 给实体类配置别名-->
+        <!--<typeAlias type ="com.fl.entity.Flower" alias="flower"></typeAlias>-->
+    <!--给包起别名 报下所有类的别名就是当前的类名首字母小写-->
+        <package name="com.fl.entity"/>
+    </typeAliases>
 
     <environments default="mysql">
         <environment id="mysql">
             <!--Mybatis 目前的事务管理 与 jdbc 保持 一致 -->
             <transactionManager type="JDBC"></transactionManager>
             <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/mybatis?characterEncoding=UTF-8&amp;serverTimezone=UTC"/>
-                <property name="username" value="root"/>
-                <property name="password" value="root"/>
+                <property name="driver" value="${m_driver}"/>
+                <property name="url" value="${m_url}"/>
+                <property name="username" value="${m_username}"/>
+                <property name="password" value="${m_password}"/>
             </dataSource>
         </environment>
     </environments>
