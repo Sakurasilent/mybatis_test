@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fl.mapper.FlowerMapper2">
+    <select id="selectOne2" resultType="flower" parameterType="int">
+        select * from flower where id=#{param1}
+    </select>
+    <select id="selectOne3" resultType="flower" parameterType="flower">
+        select  *  from flower where ID=#{id} and NAME=#{name}
+    </select>
+    <select id="selectOne4" resultType="flower" parameterType="flower">
+        select  *  from flower where ID=#{a} and NAME=#{b}
+    </select>
+</mapper>
