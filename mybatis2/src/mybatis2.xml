@@ -25,6 +25,7 @@
     <mappers>
         <mapper resource="com/fl/mapper/FlowerMapper.xml"></mapper>
         <mapper resource="com/fl/mapper/FlowerMapper2.xml"></mapper>
+        <mapper resource="com/fl/mapper/FlowerMapper3.xml"></mapper>
     </mappers>
 
 </configuration>
