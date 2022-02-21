@@ -23,9 +23,11 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com/fl/mapper/FlowerMapper.xml"></mapper>
-        <mapper resource="com/fl/mapper/FlowerMapper2.xml"></mapper>
-        <mapper resource="com/fl/mapper/FlowerMapper3.xml"></mapper>
+<!--        <package name="com.fl.mapper"/>-->
+<!--        <mapper resource="com/fl/mapper/FlowerMapper.xml"></mapper>-->
+<!--        <mapper resource="com/fl/mapper/FlowerMapper2.xml"></mapper>-->
+<!--        <mapper resource="com/fl/mapper/FlowerMapper3.xml"></mapper>-->
+        <mapper resource="com/fl/mapper/FlowerMapper4.xml"></mapper>
     </mappers>
 
 </configuration>
