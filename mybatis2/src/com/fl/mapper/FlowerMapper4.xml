@@ -9,5 +9,13 @@
     <insert id="insert">
         insert into flower values (default , #{name} , #{price} , #{production} )
     </insert>
-
+    <select id="selectOne" resultType="flower">
+        select * from flower where id = #{param1} and name = #{param2}
+    </select>
+    <select id="selectOne2" resultType="flower">
+        select * from flower where id = #{id} and name = #{name}
+    </select>
+    <select id="selectOne3" resultType="flower">
+        select * from flower where id = #{param1.id} and name = #{param2.name}
+    </select>
 </mapper>
