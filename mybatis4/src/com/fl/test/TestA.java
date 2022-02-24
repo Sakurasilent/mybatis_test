@@ -11,7 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.time.temporal.ValueRange;
+
 import java.util.List;
 
 public class TestA {
@@ -22,6 +22,16 @@ public class TestA {
         //mapper代理
         StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
         ClazzMapper clazzMapper = sqlSession.getMapper(ClazzMapper.class);
+        List<Clazz> clazzes = clazzMapper.selectAll();
+        for (Clazz clazz:clazzes){
+            System.out.println(clazz.toString());
+        }
+
+
+        List<Student> students = studentMapper.selectAll();
+        for (Student student:students) System.out.println(student);
+
+
 //        List<Student> students = studentMapper.selectAll();
 //        for (Student stu:students){
 //            int clazzno = stu.getClazzno();
@@ -30,13 +40,13 @@ public class TestA {
 //            System.out.println(stu.toString());
 //        }
 
-        List<Clazz> clazzes = clazzMapper.selectAll();
-        for (Clazz clazz:clazzes){
-            int clazzno = clazz.getClazzno();
-            List<Student> students = studentMapper.selectMore(clazzno);
-            clazz.setStudents(students);
-            System.out.println(clazz.toString());
-        }
+//        List<Clazz> clazzes = clazzMapper.selectAll();
+//        for (Clazz clazz:clazzes){
+//            int clazzno = clazz.getClazzno();
+//            List<Student> students = studentMapper.selectMore(clazzno);
+//            clazz.setStudents(students);
+//            System.out.println(clazz.toString());
+//        }
 
 
         sqlSession.close();

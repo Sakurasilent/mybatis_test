@@ -13,6 +13,12 @@ public class Clazz implements Serializable {
         this.cname = cname;
     }
 
+    public Clazz(int clazzno, String cname, List<Student> students) {
+        this.clazzno = clazzno;
+        this.cname = cname;
+        this.students = students;
+    }
+
     public int getClazzno() {
         return clazzno;
     }
